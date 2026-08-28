@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-lcd-bg: var(--lcd-bg);
+  --color-lcd-dark: var(--lcd-dark);
+  --color-lcd-mid: var(--lcd-mid);
+  --color-lcd-light: var(--lcd-light);
+  --font-pixel: var(--font-nokia), ui-monospace, monospace;
+}
+
+html {
+  background: #101014;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+/* hack: scales better on Safari */
+.phone-frame {
+  --inset: 1rem;
+  height: min(
+    calc(100cqh - var(--inset)),
+    calc((100cqw - var(--inset)) / var(--aspect))
+  );
+  width: min(
+    calc((100cqh - var(--inset)) * var(--aspect)),
+    calc(100cqw - var(--inset))
+  );
+}
+
+@media (min-width: 768px) {
+  .phone-frame {
+    --inset: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
