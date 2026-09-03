@@ -19,7 +19,7 @@ Two routes: `/` runs the flow, `/studio` is the calibration tool for fitting the
 
 ## Configuring the flow
 
-The example is a party invitation, in `config/invitation.tsx`. You are able to configure your own list of steps aswell or just override the existing demo. Each step is a kind of screen (see below) and holds its own content.
+The example is a party invitation, in `config/invitation.tsx`. You are able to configure your own list of steps as well, or just override the existing demo. Each step is a kind of screen (see below) and holds its own content.
 
 Steps need an `id` and a `type`. The `id` is what the answer comes back under, so a text step called `name` and a multiSelect called `nights` give you `{ name: "Sam", nights: ["2027-09-12"] }`. `onSubmit` receives that object when the flow reaches its confirm step, and the screen then shows sending, done or failed depending on what your promise does.
 
@@ -46,7 +46,7 @@ For something the built-ins do not cover, copy a file from `components/screens/`
 
 ## Fitting another photo
 
-`/Studio` allows you to easily fit and map the buttons for other phone images.
+`/studio` allows you to easily fit and map the buttons for other phone images.
 
 Put your image in `public/img` and load it there. Drag each box onto its key, or nudge the selected one with the arrow keys, holding Shift for bigger steps. Test keys mode names the key you actually hit, which is the quickest way to
 find one that is off. Copy the values into `config/skin.ts` when it lines up. The same panel sets the screen rectangle and the four screen colours.
