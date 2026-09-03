@@ -166,8 +166,7 @@ export const nokia3310: Skin = {
   name: "Nokia 3310",
   image: "/img/nokia-3310.webp",
   aspectRatio: 948 / 2160,
-  screen: { top: "26.2%", left: "16.4%", width: "67.7%", height: "21.5%" },
-  screenClip: "polygon(0% 0%, 100% 0%, 97% 100%, 3% 100%)",
+  screen: { top: "26.2%", left: "16.0%", width: "69.0%", height: "21.9%" },
   palette: {
     bg: "#9bbc0f",
     dark: "#0f380f",

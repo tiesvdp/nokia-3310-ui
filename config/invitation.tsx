@@ -3,7 +3,7 @@ import type { BuiltinStep } from "@/components/screens";
 export const BACKGROUND = "/img/background.webp";
 export const BACKGROUND_DIM = 0.15;
 
-const PHOTO = "/img/house.png";
+const PHOTO = "/img/white-house.jpg";
 
 /**
  * Example flow for a party invitation.
@@ -39,7 +39,7 @@ export const invitation: BuiltinStep[] = [
     id: "place",
     type: "photo",
     src: PHOTO,
-    alt: "My place",
+    alt: "The White House",
   },
   {
     id: "name",

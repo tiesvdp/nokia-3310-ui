@@ -22,7 +22,6 @@ export interface Skin {
   image: string;
   aspectRatio: number;
   screen: Rect;
-  screenClip?: string;
   palette: Palette;
   scanlines?: boolean;
   zones: ButtonZone[];

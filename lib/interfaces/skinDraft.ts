@@ -10,7 +10,6 @@ export interface SkinDraft {
   name: string;
   aspectRatio: number;
   screen: Rect;
-  screenClip: string;
   zones: ButtonZone[];
   palette: Palette;
   scanlines: boolean;

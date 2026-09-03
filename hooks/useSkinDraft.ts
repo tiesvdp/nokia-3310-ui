@@ -29,7 +29,6 @@ export function draftToSkin(draft: SkinDraft, image: string): Skin {
     image,
     aspectRatio: round(draft.aspectRatio, 4),
     screen: draft.screen,
-    ...(draft.screenClip ? { screenClip: draft.screenClip } : null),
     palette: draft.palette,
     scanlines: draft.scanlines,
     zones: draft.zones,
@@ -91,10 +90,6 @@ export function useSkinDraft(initial: SkinDraft) {
     [selected],
   );
 
-  const setScreenClip = useCallback((screenClip: string) => {
-    setDraft((prev) => ({ ...prev, screenClip }));
-  }, []);
-
   const setPaletteColour = useCallback(
     (key: keyof SkinDraft["palette"], value: string) => {
       setDraft((prev) => ({
@@ -119,7 +114,6 @@ export function useSkinDraft(initial: SkinDraft) {
     updateZone,
     updateScreen,
     nudge,
-    setScreenClip,
     setPaletteColour,
     setAspectRatio,
     reset,

@@ -156,11 +156,10 @@ export function Phone({
             left: skin.screen.left,
             width: skin.screen.width,
             height: skin.screen.height,
-            ...(skin.screenClip && { clipPath: skin.screenClip }),
           }}
         >
           {/* Screen content */}
-          <div className="absolute inset-0 px-[7cqw] py-[3cqh]">{children}</div>
+          <div className="absolute inset-0 px-[7cqw] py-[7cqh]">{children}</div>
           {overlay}
           {skin.scanlines && (
             <div className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.05)_2px,rgba(0,0,0,0.05)_4px)]" />

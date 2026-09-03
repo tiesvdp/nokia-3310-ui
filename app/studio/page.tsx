@@ -23,7 +23,6 @@ const INITIAL_DRAFT: SkinDraft = {
   name: nokia3310.name,
   aspectRatio: nokia3310.aspectRatio,
   screen: { ...nokia3310.screen },
-  screenClip: nokia3310.screenClip ?? "",
   zones: ZONES.map((zone) => ({ ...zone })),
   palette: { ...nokia3310.palette },
   scanlines: nokia3310.scanlines ?? true,
@@ -41,7 +40,6 @@ export default function SkinStudio() {
     updateZone,
     updateScreen,
     nudge,
-    setScreenClip,
     setPaletteColour,
     setAspectRatio,
     reset,
@@ -143,19 +141,7 @@ export default function SkinStudio() {
                   onChange={(patch) => updateZone(selectedZone.key, patch)}
                 />
               ) : (
-                <>
-                  <RectFields rect={draft.screen} onChange={updateScreen} />
-                  <label className={`${FIELD_LABEL} mt-2`}>
-                    clip-path
-                    <input
-                      type="text"
-                      className={FIELD}
-                      placeholder="polygon(...)"
-                      value={draft.screenClip}
-                      onChange={(event) => setScreenClip(event.target.value)}
-                    />
-                  </label>
-                </>
+                <RectFields rect={draft.screen} onChange={updateScreen} />
               )}
             </section>
           </>
