@@ -2,6 +2,8 @@
 
 A button & screen overlay for the Nokia 3310 with built-in step functionality. You define a list of steps, each one is a screen, and people click through them on the keypad. Pretty much fully extendable.  
 
+An example I built with it: [Housewarming invite](https://hw.tiesvdp.be)
+
 Text input, lists, a fake chat and a photo viewer are included, and you can write your own screens for the rest. Invitations, surveys, a quiz, a menu, a mini game, an about page, ...
 
 ![The example flow](docs/demo.webp)
